@@ -5,7 +5,7 @@ import CategoriesList from '../components/CategoriesList';
 import ErrorMessage from '../components/ErrorMessage';
 import * as fromCategories from '../redux/modules/categories';
 import * as categoriesSelectors from '../redux/selectors/categories';
-import Spinner from '../components/Spinner/Spinner';
+import Spinner from '../components/Spinner';
 
 class CategoriesListContainer extends Component {
   static propTypes = {

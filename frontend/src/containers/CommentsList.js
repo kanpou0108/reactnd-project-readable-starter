@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import Comment from '../components/Comment';
 import CommentForm from '../components/CommentForm';
 import SortList from '../components/SortList';
-import Spinner from '../components/Spinner/Spinner';
+import Spinner from '../components/Spinner';
 import ErrorMessage from '../components/ErrorMessage';
 import { getIsCommentAddFormOpen } from '../redux/selectors/posts';
 import { getCommentsByPost, getIsFetching, getErrorMessage } from '../redux/selectors/comments';

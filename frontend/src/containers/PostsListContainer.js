@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import ErrorMessage from '../components/ErrorMessage';
 import PostsList from '../components/PostsList';
 import * as fromPosts from '../redux/modules/posts';
-import Spinner from '../components/Spinner/Spinner';
+import Spinner from '../components/Spinner';
 import {
   makeGetPostsByCategory,
   getIsFetching,
