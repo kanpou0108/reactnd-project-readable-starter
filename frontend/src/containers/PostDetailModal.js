@@ -6,7 +6,8 @@ import Post from '../components/Post';
 import { openPostModal, closePostModal } from '../redux/modules/modal';
 import { getPost, getIsFetching } from '../redux/selectors/posts';
 import { getPostModalOpen } from '../redux/selectors/ui';
-import CommentsList from './CommentsList';
+// import CommentsList from './CommentsList';
+import CommentsList from '../components/CommentsList';
 import { redirectToReferrerOrHome } from '../utils/helpers';
 
 class PostDetailModal extends Component {

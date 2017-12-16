@@ -1,20 +1,20 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import Comment from '../components/Comment';
-import CommentForm from '../components/CommentForm';
-import SortList from '../components/SortList';
-import Spinner from '../components/Spinner';
-import ErrorMessage from '../components/ErrorMessage';
-import { getIsCommentAddFormOpen } from '../redux/selectors/posts';
-import { getCommentsByPost, getIsFetching, getErrorMessage } from '../redux/selectors/comments';
+import Comment from '../Comment';
+import CommentForm from '../CommentForm';
+import SortList from '../SortList';
+import Spinner from '../Spinner';
+import ErrorMessage from '../ErrorMessage';
+import { getIsCommentAddFormOpen } from '../../redux/selectors/posts';
+import { getCommentsByPost, getIsFetching, getErrorMessage } from '../../redux/selectors/comments';
 import {
   fetchAndHandleComments,
   saveNewComment,
   updateComment,
   toggleCommentAddForm,
   handleSort,
-} from '../redux/modules/comments';
+} from '../../redux/modules/comments';
 
 class CommentsList extends Component {
   componentDidMount() {
