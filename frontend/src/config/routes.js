@@ -6,7 +6,8 @@ import CategoriesListContainer from '../containers/CategoriesListContainer';
 import PostFormModal from '../containers/PostFormModal';
 import PostDetailModal from '../containers/PostDetailModal';
 import { Header, Footer, Sidebar } from '../components/Layouts';
-import '../index.css';
+
+import styles from './styles.css';
 
 const DefaultLayout = ({ component: Component, showSidebar = 'false', isModal = 'false', ...rest }) => (
   <Route
@@ -18,14 +19,14 @@ const DefaultLayout = ({ component: Component, showSidebar = 'false', isModal = 
         match: prevLocationState.prevMatch,
       } : matchProps;
       return (
-        <div className="app">
+        <div className={styles.app}>
           <Header />
-          <div className="app-container">
+          <div className={styles.appContainer}>
             {showSidebar === 'true' &&
             (<Sidebar>
               <CategoriesListContainer {...matchProps} />
             </Sidebar>)}
-            <div className="inner-container">
+            <div className={styles.innerContainer}>
               {isModal === 'true' ?
                 (
                   <div>
