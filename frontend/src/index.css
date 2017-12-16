@@ -57,10 +57,3 @@ select::-ms-expand {
 select:disabled::-ms-expand {
   background: #f60;
 }
-
-
-/* .errorMessage {
-  display: flex;
-  width: 100%;
-  padding: 15px;
-} */
