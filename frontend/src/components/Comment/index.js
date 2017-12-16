@@ -74,12 +74,10 @@ Comment.propTypes = {
   closeConfirmDeleteCommentModal: T.func.isRequired,
 };
 
-function mapStateToProps(state, ownProps) {
-  return {
-    isCommentEditFormOpen: commentsSelector.getIsCommentEditFormOpen(state, ownProps.comment.id),
-    confirmDeleteCommentModalOpen: uiSelector.getConfirmDeleteCommentModalOpen(state),
-  };
-}
+const mapStateToProps = (state, ownProps) => ({
+  isCommentEditFormOpen: commentsSelector.getIsCommentEditFormOpen(state, ownProps.comment.id),
+  confirmDeleteCommentModalOpen: uiSelector.getConfirmDeleteCommentModalOpen(state),
+});
 
 export default connect(
   mapStateToProps,
