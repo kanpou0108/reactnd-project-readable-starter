@@ -4,7 +4,7 @@ import T from 'prop-types';
 import PostsListContainer from '../containers/PostsListContainer';
 import CategoriesListContainer from '../components/CategoriesListContainer';
 import PostFormModal from '../containers/PostFormModal';
-import PostDetailModal from '../containers/PostDetailModal';
+import PostDetailModal from '../components/PostDetailModal';
 import { Header, Footer, Sidebar } from '../components/Layouts';
 
 import styles from './styles.css';

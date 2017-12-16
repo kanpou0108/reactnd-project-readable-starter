@@ -1,14 +1,10 @@
 import React, { Component } from 'react';
 import T from 'prop-types';
-import { connect } from 'react-redux';
-import Modal from '../components/Modal';
-import Post from '../components/Post';
-import { openPostModal, closePostModal } from '../redux/modules/modal';
-import { getPost, getIsFetching } from '../redux/selectors/posts';
-import { getPostModalOpen } from '../redux/selectors/ui';
-// import CommentsList from './CommentsList';
-import CommentsList from '../components/CommentsList';
-import { redirectToReferrerOrHome } from '../utils/helpers';
+
+import Modal from '../Modal';
+import Post from '../Post';
+import CommentsList from '../CommentsList';
+import { redirectToReferrerOrHome } from '../../utils/helpers';
 
 class PostDetailModal extends Component {
   componentDidMount() {
@@ -53,17 +49,5 @@ PostDetailModal.propTypes = {
   isFetching: T.bool,
 };
 
-function mapStateToProps(state, ownProps) {
-  const postId = ownProps.match.params.id;
-  const category = ownProps.match.params.category;
-  return {
-    postModalOpen: getPostModalOpen(state),
-    post: getPost(state, postId),
-    isFetching: getIsFetching(state, category),
-  };
-}
+export default PostDetailModal;
 
-export default connect(
-  mapStateToProps,
-  { openPostModal, closePostModal },
-)(PostDetailModal);
