@@ -49,7 +49,7 @@ hr {
   text-decoration: none;
 }
 
-.comment-form-wrapper {
+.commentFormWrapper {
   padding: 15px;
   background-color: rgb(245, 244, 244);
   border: 1px solid rgba(120, 120, 120, 0.2);
@@ -57,7 +57,7 @@ hr {
   margin: 20px 0 10px 0;
 }
 
-.comment-form>div {
+.commentForm>div {
   display: flex;
   flex:1;
   justify-content: center;
@@ -65,7 +65,7 @@ hr {
   font-size:1em;
 }
 
-.comment-form>div>label {
+.commentForm>div>label {
   font-weight: 700;
   margin-right: 10px;
   min-width: 60px;
@@ -74,16 +74,16 @@ hr {
 }
 
 @media (max-width: 599px) {
-  .comment-form>div {
+  .commentForm>div {
     flex-direction: column;
   }
 
-  .comment-form>div>label {
+  .commentForm>div>label {
     text-align: left;
   }
 }
 
-.comment-form>div>div {
+.commentForm>div>div {
   flex: 1;
   max-width: 500px;
   display: flex;
@@ -91,7 +91,7 @@ hr {
   position: relative;
 }
 
-.comment-form>div>div>*:first-child {
+.commentForm>div>div>*:first-child {
   flex: 1;
   font-size: 1em;
   padding: 10px 10px;
@@ -100,26 +100,26 @@ hr {
   border-radius: 4px;
 }
 
-.comment-form>div>div>*:first-child.has-error {
+.commentForm>div>div>*:first-child.has-error {
   border: 1px solid rgb(255, 113, 113);
 }
 
-.comment-form>div>div>.validation-error {
+.commentForm>div>div>.validation-error {
   color: red;
   font-weight: 400;
 }
 
-.comment-form>div button {
+.commentForm>div button {
   margin: 10px;
   cursor: pointer;
 }
 
-.comment-form>div button {
+.commentForm>div button {
   margin: 10px;
   cursor: pointer;
 }
 
-.comment-form>div button[type=submit] {
+.commentForm>div button[type=submit] {
     white-space: nowrap;
     display: inline-block;
     border-radius: 5px;
@@ -130,11 +130,11 @@ hr {
     border: 1px solid #285f8f;
   }
 
-.comment-form>div button[type=submit]:hover {
+.commentForm>div button[type=submit]:hover {
     background-image: linear-gradient(#f95e49,#f66a57);
 }
 
-.comment-form>div button[type=button] {
+.commentForm>div button[type=button] {
     white-space: nowrap;
     display: inline-block;
     border-radius: 5px;
@@ -146,16 +146,16 @@ hr {
     color: #000;
   }
 
-.comment-form>div button[type=button]:hover {
+.commentForm>div button[type=button]:hover {
       background-image: linear-gradient(#fff,#eee);
   }
 
-.comment-form>div button[type=button][disabled] {
+.commentForm>div button[type=button][disabled] {
     opacity: .6;
     cursor: not-allowed;
 }
 
-.comment-form>div button[type=submit][disabled] {
+.commentForm>div button[type=submit][disabled] {
     opacity: .6;
     cursor: not-allowed;
 }

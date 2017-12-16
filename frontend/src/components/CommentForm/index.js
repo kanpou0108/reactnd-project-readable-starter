@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Field, reduxForm } from 'redux-form';
 import { v4 } from 'uuid';
-import './CommentForm.css';
+
+import styles from './styles.css';
 
 /* eslint-disable react/prop-types */
 const renderInputField = (props) => {
@@ -66,8 +67,8 @@ class CommentForm extends Component {
       submitting, onToggleCommentAdd,
       onToggleCommentEdit, commentId } = this.props;
     return (
-      <div className="comment-form-wrapper">
-        <form className="comment-form" onSubmit={handleSubmit(commentId ? this.onSubmitEditComment : this.onSubmitNewComment)}>
+      <div className={styles.commentFormWrapper}>
+        <form className={styles.commentForm} onSubmit={handleSubmit(commentId ? this.onSubmitEditComment : this.onSubmitNewComment)}>
           <Field
             id="rdCommentAuthor"
             name="author"

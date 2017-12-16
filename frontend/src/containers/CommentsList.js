@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Comment from '../components/Comment';
-import CommentForm from '../components/CommentForm/CommentForm';
+import CommentForm from '../components/CommentForm';
 import SortList from '../components/SortList';
 import Spinner from '../components/Spinner/Spinner';
 import ErrorMessage from '../components/ErrorMessage/ErrorMessage';

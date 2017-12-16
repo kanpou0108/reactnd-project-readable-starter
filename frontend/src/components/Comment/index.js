@@ -6,7 +6,7 @@ import {
   FaTimesCircle,
   FaUser } from 'react-icons/lib/fa';
 import CommentVoteScore from '../../containers/CommentVoteScore';
-import CommentForm from '../CommentForm/CommentForm';
+import CommentForm from '../CommentForm';
 import ConfirmModal from '../ConfirmModal/ConfirmModal';
 import * as fromComments from '../../redux/modules/comments';
 import * as commentsSelector from '../../redux/selectors/comments';
