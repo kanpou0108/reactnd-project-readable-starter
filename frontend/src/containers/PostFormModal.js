@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { v4 } from 'uuid';
 import Modal from '../components/Modal';
-import PostForm from '../components/PostForm/PostForm';
+import PostForm from '../components/PostForm';
 import { openPostModal, closePostModal } from '../redux/modules/modal';
 import { saveNewPost, updatePost } from '../redux/modules/posts';
 import { getPost } from '../redux/selectors/posts';

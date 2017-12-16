@@ -33,14 +33,14 @@ hr {
    color: #ccc;
 }
 
-.post-form>div {
+.postForm>div {
   display: flex;
   justify-content: center;
   margin: 10px 5px;
   font-size:16px;
 }
 
-.post-form>div>label {
+.postForm>div>label {
   font-weight: 700;
   margin-right: 10px;
   min-width: 100px;
@@ -49,16 +49,16 @@ hr {
 }
 
 @media (max-width: 599px) {
-  .post-form>div {
+  .postForm>div {
     flex-direction: column;
   }
 
-  .post-form>div>label {
+  .postForm>div>label {
     text-align: left;
   }
 }
 
-.post-form>div>div {
+.postForm>div>div {
   flex: 1;
   max-width: 500px;
   display: flex;
@@ -66,7 +66,7 @@ hr {
   position: relative;
 }
 
-.post-form>div>div>*:first-child {
+.postForm>div>div>*:first-child {
   flex: 1;
   font-size: 16px;
   padding: 10px 10px;
@@ -75,21 +75,21 @@ hr {
   border-radius: 4px;
 }
 
-.post-form>div>div>*:first-child.has-error {
+.postForm>div>div>*:first-child.has-error {
   border: 1px solid rgb(255, 113, 113);
 }
 
-.post-form>div>div>.validation-error {
+.postForm>div>div>.validation-error {
   color: red;
   font-weight: 400;
 }
 
-.post-form>div button {
+.postForm>div button {
   margin: 10px;
   cursor: pointer;
 }
 
-.post-form>div button[type=submit] {
+.postForm>div button[type=submit] {
     white-space: nowrap;
     display: inline-block;
     border-radius: 5px;
@@ -100,11 +100,11 @@ hr {
     border: 1px solid #285f8f;
   }
 
-.post-form>div button[type=submit]:hover {
+.postForm>div button[type=submit]:hover {
     background-image: linear-gradient(#f95e49,#f66a57);
 }
 
-.post-form>div button[type=button] {
+.postForm>div button[type=button] {
     white-space: nowrap;
     display: inline-block;
     border-radius: 5px;
@@ -116,16 +116,16 @@ hr {
     color: #000;
   }
 
-.post-form>div button[type=button]:hover {
+.postForm>div button[type=button]:hover {
       background-image: linear-gradient(#fff,#eee);
   }
 
-.post-form>div button[type=button][disabled] {
+.postForm>div button[type=button][disabled] {
     opacity: .6;
     cursor: not-allowed;
 }
 
-.post-form>div button[type=submit][disabled] {
+.postForm>div button[type=submit][disabled] {
     opacity: .6;
     cursor: not-allowed;
 }

@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Field, reduxForm } from 'redux-form';
-import './PostForm.css';
+
+import styles from './styles.css';
 
 /* eslint-disable react/prop-types */
 const renderInputField = (props) => {
@@ -65,7 +66,7 @@ const PostForm = (props) => {
     <div>
       <h1>{match.params.id ? 'Edit Post' : 'Add New Post'}</h1>
       <hr />
-      <form className="post-form" onSubmit={handleSubmit(match.params.id ? props.onUpdatePost : props.onSavePost)}>
+      <form className={styles.postForm} onSubmit={handleSubmit(match.params.id ? props.onUpdatePost : props.onSavePost)}>
         <Field
           id="rdTitle"
           name="title"
