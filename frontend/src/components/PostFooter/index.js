@@ -5,7 +5,7 @@ import {
   FaCommentingO, FaEdit,
   FaTimesCircle } from 'react-icons/lib/fa';
 import ConfirmModal from '../ConfirmModal/ConfirmModal';
-import './PostFooter.css';
+import styles from './styles.css';
 
 const PostFooter = (props) => {
   const onDelete = (event) => {
@@ -19,7 +19,7 @@ const PostFooter = (props) => {
     if (props.showBody) props.history.push('/');
   };
   return (
-    <div className="post-footer">
+    <div className={styles.postFooter}>
       <span className="post-comments-count">
         <FaCommentingO />
         <span href="">{`${props.comments ? props.comments.length : '0'} Comments`}</span>

@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import PostFooter from '../components/PostFooter/PostFooter';
+import PostFooter from '../components/PostFooter';
 import { getPostComments } from '../redux/selectors/posts';
 import { getConfirmDeletePostModalOpen } from '../redux/selectors/ui';
 import { disablePost } from '../redux/modules/posts';
