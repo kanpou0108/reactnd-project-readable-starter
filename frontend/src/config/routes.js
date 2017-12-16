@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import T from 'prop-types';
 import PostsListContainer from '../containers/PostsListContainer';
-import CategoriesListContainer from '../containers/CategoriesListContainer';
+import CategoriesListContainer from '../components/CategoriesListContainer';
 import PostFormModal from '../containers/PostFormModal';
 import PostDetailModal from '../containers/PostDetailModal';
 import { Header, Footer, Sidebar } from '../components/Layouts';
