@@ -16,6 +16,8 @@ import {
   handleSort,
 } from '../../redux/modules/comments';
 
+import styles from './styles.css';
+
 class CommentsList extends Component {
   componentDidMount() {
     if (this.props.comments.length === 0) {
@@ -33,9 +35,9 @@ class CommentsList extends Component {
   render() {
     return (
       <div>
-        <div className="comments-list-header">
+        <div className={styles.commentsListHeader}>
           <h3>Comments</h3>
-          <button className="btn-addNewComment" onClick={this.toggleCommentAddForm}>Add New Comment</button>
+          <button className={styles.btnAddNewComment} onClick={this.toggleCommentAddForm}>Add New Comment</button>
         </div>
         {this.props.isCommentAddFormOpen &&
           <CommentForm
@@ -49,7 +51,7 @@ class CommentsList extends Component {
           handleSort={this.props.handleSort}
           parentId={this.props.postId}
         />
-        <div className="comments-list">
+        <div className={styles.commentsList}>
           {this.props.isFetching && <Spinner />}
 
           {

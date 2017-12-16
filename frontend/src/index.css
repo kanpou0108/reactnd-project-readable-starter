@@ -58,15 +58,6 @@ select:disabled::-ms-expand {
   background: #f60;
 }
 
-.comments-list {
-  margin-left: 15px;
-}
-
-.comments-list-header {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 15px;
-}
 
 .errorMessage {
   display: flex;
