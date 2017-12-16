@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ReactModal from 'react-modal';
 import { FaClose } from 'react-icons/lib/fa';
-import './Modal.css';
+
+import styles from './styles.css';
 
 const customStyles = {
   content: {
@@ -34,7 +35,7 @@ const Modal = props => (
     {!props.hideCloseButton && (<span
       role="button"
       tabIndex="0"
-      className="modal-close-button"
+      className={styles.modalCloseButton}
       onClick={props.closeModal}
     >
       <FaClose />

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { v4 } from 'uuid';
-import Modal from '../components/Modal/Modal';
+import Modal from '../components/Modal';
 import PostForm from '../components/PostForm/PostForm';
 import { openPostModal, closePostModal } from '../redux/modules/modal';
 import { saveNewPost, updatePost } from '../redux/modules/posts';

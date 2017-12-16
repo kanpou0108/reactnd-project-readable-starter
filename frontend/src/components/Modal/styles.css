@@ -1,4 +1,4 @@
-.modal-close-button {
+.modalCloseButton {
   position: fixed;
   top: 0px;
   right: 10px;
@@ -8,6 +8,6 @@
   cursor: pointer;
 }
 
-.modal-close-button:hover {
+.modalCloseButton:hover {
   color: rgba(167, 167, 167, 0.9);
 }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import Modal from '../components/Modal/Modal';
+import Modal from '../components/Modal';
 import Post from '../components/Post';
 import { openPostModal, closePostModal } from '../redux/modules/modal';
 import { getPost, getIsFetching } from '../redux/selectors/posts';
