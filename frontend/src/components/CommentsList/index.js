@@ -10,7 +10,7 @@ import {
   handleSort,
 } from '../../redux/modules/comments';
 
-import View from './View';
+import Container from './Container';
 
 const mapStateToProps = (state, ownProps) => {
   const postId = ownProps.postId;
@@ -25,4 +25,4 @@ const mapStateToProps = (state, ownProps) => {
 export default connect(
   mapStateToProps,
   { fetchAndHandleComments, saveNewComment, updateComment, toggleCommentAddForm, handleSort },
-)(View);
+)(Container);
