@@ -25,7 +25,7 @@ const Post = ({
       <div className={styles.postCategories}>
         <span className={styles.postCategory}>{category}</span>
       </div>
-      <div className={styles.post-title}>
+      <div className={styles.postTitle}>
         <h2>
           <Link
             to={{ pathname: `/${category}/${id}`,
