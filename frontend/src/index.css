@@ -54,7 +54,7 @@ button, span {
   flex-direction: column;
 }
 
-.app-header {
+/* .app-header {
   box-shadow: 0 0 2px 2px rgba(0, 0, 0, .25);
   padding: 15px 10px;
   text-align: center;
@@ -76,7 +76,7 @@ button, span {
   text-decoration: none;
   color: rgb(255, 255, 255);
   cursor: pointer;
-}
+} */
 
 .app-container {
   width: 80%;
