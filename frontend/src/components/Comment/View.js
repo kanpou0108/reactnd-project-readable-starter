@@ -6,7 +6,7 @@ import {
   FaTimesCircle,
   FaUser } from 'react-icons/lib/fa';
 import { convertUnixTimestampToDate } from '../../utils/helpers';
-import CommentVoteScore from '../../containers/CommentVoteScore';
+import CommentVoteScore from '../../components/CommentVoteScore';
 import CommentForm from '../CommentForm';
 import ConfirmModal from '../ConfirmModal';
 
