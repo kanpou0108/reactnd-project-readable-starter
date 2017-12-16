@@ -1,14 +1,14 @@
-.list-posts p {
+.listPosts p {
   margin: 10px;
   font-size: 1.2em;
 }
-.add-new-post {
+.addNewPost {
   position: fixed;
   bottom: 25px;
   right: 25px;
 }
 
-.add-new-post a {
+.addNewPost a {
   display: block;
   padding: 15px 10px;
   font-size: 1em;
@@ -22,7 +22,7 @@
 }
 
 @media (max-width: 560px) {
-  .add-new-post a {
+  .addNewPost a {
     font-size: 1.5em;
     border-radius: 50%;
     padding: 5px 5px;
@@ -31,7 +31,7 @@
     text-align:center;
   }
 
-  .add-new-post a span {
+  .addNewPost a span {
     font-size: 0;
   }
 }
