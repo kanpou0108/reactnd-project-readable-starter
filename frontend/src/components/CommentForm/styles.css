@@ -88,11 +88,11 @@ hr {
   border-radius: 4px;
 }
 
-.commentForm>div>div>*:first-child.has-error {
+.commentForm>div>div>*:first-child.hasError {
   border: 1px solid rgb(255, 113, 113);
 }
 
-.commentForm>div>div>.validation-error {
+.commentForm>div>div>.validationError {
   color: red;
   font-weight: 400;
 }

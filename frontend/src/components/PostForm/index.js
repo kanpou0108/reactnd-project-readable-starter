@@ -8,13 +8,13 @@ import styles from './styles.css';
 const renderInputField = (props) => {
   const { input, label, type, id, placeholder, meta } = props;
   const { touched, error } = meta;
-  const className = `${touched && error && 'has-error'}`;
+  const className = `${touched && error && 'hasError'}`;
   return (
     <div>
       <label htmlFor={id}>{label}</label>
       <div>
         <input {...input} id={id} type={type} placeholder={placeholder} className={className} />
-        {touched && (error && <span className="validation-error">{error}</span>) }
+        {touched && (error && <span className={styles.validationError}>{error}</span>) }
       </div>
     </div>
   );
@@ -23,13 +23,13 @@ const renderInputField = (props) => {
 const renderTextAreaField = (props) => {
   const { input, label, id, placeholder, meta } = props;
   const { touched, error } = meta;
-  const className = `${touched && error && 'has-error'}`;
+  const className = `${touched && error && 'hasError'}`;
   return (
     <div>
       <label htmlFor={id}>{label}</label>
       <div>
         <textarea {...input} rows="4" placeholder={placeholder} className={className} />
-        {touched && (error && <span className="validation-error">{error}</span>) }
+        {touched && (error && <span className={styles.validationError}>{error}</span>) }
       </div>
     </div>
   );
@@ -38,7 +38,7 @@ const renderTextAreaField = (props) => {
 const renderSelectField = (props) => {
   const { input, label, id, children, meta } = props;
   const { touched, error } = meta;
-  const className = `${touched && error && 'has-error'}`;
+  const className = `${touched && error && 'hasError'}`;
   return (
     <div>
       <label htmlFor={id}>{label}</label>
@@ -46,7 +46,7 @@ const renderSelectField = (props) => {
         <select {...input} className={className}>
           {children}
         </select>
-        {touched && (error && <span className="validation-error">{error}</span>) }
+        {touched && (error && <span className={styles.validationError}>{error}</span>) }
       </div>
     </div>
   );

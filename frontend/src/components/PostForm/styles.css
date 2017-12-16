@@ -75,11 +75,11 @@ hr {
   border-radius: 4px;
 }
 
-.postForm>div>div>*:first-child.has-error {
+.postForm>div>div>*:first-child.hasError {
   border: 1px solid rgb(255, 113, 113);
 }
 
-.postForm>div>div>.validation-error {
+.postForm>div>div>.validationError {
   color: red;
   font-weight: 400;
 }
