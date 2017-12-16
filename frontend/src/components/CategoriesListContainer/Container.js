@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import T from 'prop-types';
-import { connect } from 'react-redux';
+
 import CategoriesList from '../CategoriesList';
 import ErrorMessage from '../ErrorMessage';
-import * as fromCategories from '../../redux/modules/categories';
-import * as categoriesSelectors from '../../redux/selectors/categories';
 import Spinner from '../Spinner';
 
 class CategoriesListContainer extends Component {
@@ -37,11 +35,4 @@ class CategoriesListContainer extends Component {
   }
 }
 
-export default connect(
-  state => ({
-    categories: categoriesSelectors.getCategories(state),
-    isFetching: categoriesSelectors.getIsFetching(state),
-    errorMessage: categoriesSelectors.getErrorMessage(state),
-  }),
-  { fetchAndHandleCategories: fromCategories.fetchAndHandleCategories },
-)(CategoriesListContainer);
+export default CategoriesListContainer;
