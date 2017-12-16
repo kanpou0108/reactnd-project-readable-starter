@@ -2,7 +2,9 @@ import { createSelector } from 'reselect';
 
 const getCategoryNames = state => state.allCategories.names;
 const getCategoryObjects = state => state.entities.categories;
+
 export const getIsFetching = state => state.allCategories.isFetching;
+
 export const getErrorMessage = state => state.allCategories.errorMessage;
 
 /* Memoized Selectors */
