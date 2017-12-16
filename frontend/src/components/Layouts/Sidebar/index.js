@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import T from 'prop-types';
 
 import styles from './styles.css';
 
@@ -10,7 +10,7 @@ const Sidebar = props => (
 );
 
 Sidebar.propTypes = {
-  children: PropTypes.element,
+  children: T.element,
 };
 
 export default Sidebar;

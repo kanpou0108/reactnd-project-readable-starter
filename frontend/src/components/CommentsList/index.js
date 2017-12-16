@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import T from 'prop-types';
 import { connect } from 'react-redux';
 import Comment from '../Comment';
 import CommentForm from '../CommentForm';
@@ -74,16 +74,16 @@ class CommentsList extends Component {
 }
 
 CommentsList.propTypes = {
-  comments: PropTypes.array.isRequired,
-  fetchAndHandleComments: PropTypes.func.isRequired,
-  saveNewComment: PropTypes.func.isRequired,
-  updateComment: PropTypes.func.isRequired,
-  isCommentAddFormOpen: PropTypes.bool,
-  toggleCommentAddForm: PropTypes.func.isRequired,
-  postId: PropTypes.string.isRequired,
-  handleSort: PropTypes.func,
-  isFetching: PropTypes.bool.isRequired,
-  errorMessage: PropTypes.string,
+  comments: T.array.isRequired,
+  fetchAndHandleComments: T.func.isRequired,
+  saveNewComment: T.func.isRequired,
+  updateComment: T.func.isRequired,
+  isCommentAddFormOpen: T.bool,
+  toggleCommentAddForm: T.func.isRequired,
+  postId: T.string.isRequired,
+  handleSort: T.func,
+  isFetching: T.bool.isRequired,
+  errorMessage: T.string,
 };
 
 function mapStateToProps(state, ownProps) {

@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import T from 'prop-types';
 import { FaCaretSquareODown, FaCaretSquareOUp } from 'react-icons/lib/fa';
 
 import styles from './styles.css';
@@ -30,9 +30,9 @@ const VoteScore = (props) => {
 };
 
 VoteScore.propTypes = {
-  score: PropTypes.number.isRequired,
-  onVoteUp: PropTypes.func.isRequired,
-  onVoteDown: PropTypes.func.isRequired,
+  score: T.number.isRequired,
+  onVoteUp: T.func.isRequired,
+  onVoteDown: T.func.isRequired,
 };
 
 export default VoteScore;

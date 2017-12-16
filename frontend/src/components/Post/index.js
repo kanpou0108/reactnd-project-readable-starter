@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import T from 'prop-types';
 import { Link, withRouter } from 'react-router-dom';
 import { FaUser } from 'react-icons/lib/fa';
 import { convertUnixTimestampToDate } from '../../utils/helpers';
@@ -53,15 +53,15 @@ const Post = ({
 );
 
 Post.propTypes = {
-  id: PropTypes.string.isRequired,
-  category: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  author: PropTypes.string.isRequired,
-  timestamp: PropTypes.number.isRequired,
-  body: PropTypes.string.isRequired,
-  showBody: PropTypes.bool,
-  location: PropTypes.object.isRequired,
-  match: PropTypes.object.isRequired,
+  id: T.string.isRequired,
+  category: T.string.isRequired,
+  title: T.string.isRequired,
+  author: T.string.isRequired,
+  timestamp: T.number.isRequired,
+  body: T.string.isRequired,
+  showBody: T.bool,
+  location: T.object.isRequired,
+  match: T.object.isRequired,
 };
 
 export default withRouter(Post);

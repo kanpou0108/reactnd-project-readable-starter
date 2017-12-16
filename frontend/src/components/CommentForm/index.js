@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import T from 'prop-types';
 import { Field, reduxForm } from 'redux-form';
 import { v4 } from 'uuid';
 
@@ -101,15 +101,15 @@ class CommentForm extends Component {
 }
 
 CommentForm.propTypes = {
-  handleSubmit: PropTypes.func.isRequired,
-  pristine: PropTypes.bool.isRequired,
-  submitting: PropTypes.bool.isRequired,
-  onSaveComment: PropTypes.func,
-  onUpdateComment: PropTypes.func,
-  onToggleCommentAdd: PropTypes.func,
-  onToggleCommentEdit: PropTypes.func,
-  postId: PropTypes.string,
-  commentId: PropTypes.string,
+  handleSubmit: T.func.isRequired,
+  pristine: T.bool.isRequired,
+  submitting: T.bool.isRequired,
+  onSaveComment: T.func,
+  onUpdateComment: T.func,
+  onToggleCommentAdd: T.func,
+  onToggleCommentEdit: T.func,
+  postId: T.string,
+  commentId: T.string,
 };
 
 export default reduxForm({

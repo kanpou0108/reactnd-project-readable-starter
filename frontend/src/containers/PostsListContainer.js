@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import T from 'prop-types';
 import { connect } from 'react-redux';
 import ErrorMessage from '../components/ErrorMessage';
 import PostsList from '../components/PostsList';
@@ -14,15 +14,15 @@ import {
 
 class PostsListContainer extends Component {
   static propTypes = {
-    posts: PropTypes.arrayOf(PropTypes.object).isRequired,
-    fetchAndHandlePosts: PropTypes.func.isRequired,
-    isFetching: PropTypes.bool.isRequired,
-    errorMessage: PropTypes.string,
-    category: PropTypes.string.isRequired,
-    handleSort: PropTypes.func.isRequired,
-    shouldFetch: PropTypes.bool.isRequired,
-    match: PropTypes.object,
-    location: PropTypes.object,
+    posts: T.arrayOf(T.object).isRequired,
+    fetchAndHandlePosts: T.func.isRequired,
+    isFetching: T.bool.isRequired,
+    errorMessage: T.string,
+    category: T.string.isRequired,
+    handleSort: T.func.isRequired,
+    shouldFetch: T.bool.isRequired,
+    match: T.object,
+    location: T.object,
   }
 
   componentDidMount() {

@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import T from 'prop-types';
 
 import styles from './styles.css';
 
@@ -14,8 +14,8 @@ const ErrorMessage = (props) => {
 };
 
 ErrorMessage.propTypes = {
-  error: PropTypes.string,
-  onRetry: PropTypes.func,
+  error: T.string,
+  onRetry: T.func,
 };
 
 export default ErrorMessage;

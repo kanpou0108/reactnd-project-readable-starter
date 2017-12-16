@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import T from 'prop-types';
 import { FaThList } from 'react-icons/lib/fa';
 import Category from '../Category';
 
@@ -19,7 +19,7 @@ const CategoriesList = ({ categories }) => (
 );
 
 CategoriesList.propTypes = {
-  categories: PropTypes.arrayOf(PropTypes.object).isRequired,
+  categories: T.arrayOf(T.object).isRequired,
 };
 
 export default CategoriesList;

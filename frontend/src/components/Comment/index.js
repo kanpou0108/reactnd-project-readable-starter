@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import T from 'prop-types';
 import { connect } from 'react-redux';
 import {
   FaEdit,
@@ -64,14 +64,14 @@ const Comment = (props) => {
 };
 
 Comment.propTypes = {
-  comment: PropTypes.object.isRequired,
-  updateComment: PropTypes.func.isRequired,
-  disableComment: PropTypes.func.isRequired,
-  isCommentEditFormOpen: PropTypes.bool,
-  toggleCommentEditForm: PropTypes.func,
-  confirmDeleteCommentModalOpen: PropTypes.bool.isRequired,
-  openConfirmDeleteCommentModal: PropTypes.func.isRequired,
-  closeConfirmDeleteCommentModal: PropTypes.func.isRequired,
+  comment: T.object.isRequired,
+  updateComment: T.func.isRequired,
+  disableComment: T.func.isRequired,
+  isCommentEditFormOpen: T.bool,
+  toggleCommentEditForm: T.func,
+  confirmDeleteCommentModalOpen: T.bool.isRequired,
+  openConfirmDeleteCommentModal: T.func.isRequired,
+  closeConfirmDeleteCommentModal: T.func.isRequired,
 };
 
 function mapStateToProps(state, ownProps) {

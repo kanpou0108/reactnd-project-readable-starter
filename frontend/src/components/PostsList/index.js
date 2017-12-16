@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import T from 'prop-types';
 import { Link } from 'react-router-dom';
 import { FaPlus } from 'react-icons/lib/fa';
 import Post from '../Post';
@@ -31,11 +31,11 @@ const PostsList = ({ posts, category, handleSort, location, match }) => (
 );
 
 PostsList.propTypes = {
-  posts: PropTypes.arrayOf(PropTypes.object).isRequired,
-  category: PropTypes.string.isRequired,
-  handleSort: PropTypes.func.isRequired,
-  location: PropTypes.object.isRequired,
-  match: PropTypes.object.isRequired,
+  posts: T.arrayOf(T.object).isRequired,
+  category: T.string.isRequired,
+  handleSort: T.func.isRequired,
+  location: T.object.isRequired,
+  match: T.object.isRequired,
 };
 
 export default PostsList;

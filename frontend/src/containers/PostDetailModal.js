@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import T from 'prop-types';
 import { connect } from 'react-redux';
 import Modal from '../components/Modal';
 import Post from '../components/Post';
@@ -44,13 +44,13 @@ class PostDetailModal extends Component {
 }
 
 PostDetailModal.propTypes = {
-  openPostModal: PropTypes.func.isRequired,
-  closePostModal: PropTypes.func.isRequired,
-  postModalOpen: PropTypes.bool.isRequired,
-  location: PropTypes.object.isRequired,
-  history: PropTypes.object.isRequired,
-  post: PropTypes.object,
-  isFetching: PropTypes.bool,
+  openPostModal: T.func.isRequired,
+  closePostModal: T.func.isRequired,
+  postModalOpen: T.bool.isRequired,
+  location: T.object.isRequired,
+  history: T.object.isRequired,
+  post: T.object,
+  isFetching: T.bool,
 };
 
 function mapStateToProps(state, ownProps) {

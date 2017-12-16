@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import T from 'prop-types';
 import { Field, reduxForm } from 'redux-form';
 
 import styles from './styles.css';
@@ -119,13 +119,13 @@ const PostForm = (props) => {
 };
 
 PostForm.propTypes = {
-  handleSubmit: PropTypes.func.isRequired,
-  pristine: PropTypes.bool.isRequired,
-  reset: PropTypes.func.isRequired,
-  submitting: PropTypes.bool.isRequired,
-  onSavePost: PropTypes.func.isRequired,
-  onUpdatePost: PropTypes.func.isRequired,
-  match: PropTypes.object.isRequired,
+  handleSubmit: T.func.isRequired,
+  pristine: T.bool.isRequired,
+  reset: T.func.isRequired,
+  submitting: T.bool.isRequired,
+  onSavePost: T.func.isRequired,
+  onUpdatePost: T.func.isRequired,
+  match: T.object.isRequired,
 };
 
 export default reduxForm({

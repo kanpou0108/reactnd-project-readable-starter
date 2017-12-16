@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import T from 'prop-types';
 import Modal from '../Modal';
 
 import styles from './styles.css';
@@ -34,10 +34,10 @@ class ConfirmModal extends Component {
 }
 
 ConfirmModal.propTypes = {
-  onConfirm: PropTypes.func.isRequired,
-  isOpen: PropTypes.bool.isRequired,
-  onClose: PropTypes.func.isRequired,
-  message: PropTypes.string,
+  onConfirm: T.func.isRequired,
+  isOpen: T.bool.isRequired,
+  onClose: T.func.isRequired,
+  message: T.string,
 };
 
 export default ConfirmModal;

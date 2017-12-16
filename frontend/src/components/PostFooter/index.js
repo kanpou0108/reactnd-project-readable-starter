@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import T from 'prop-types';
 import { Link } from 'react-router-dom';
 import {
   FaCommentingO, FaEdit,
@@ -51,17 +51,17 @@ const PostFooter = (props) => {
 };
 
 PostFooter.propTypes = {
-  comments: PropTypes.array,
-  postId: PropTypes.string.isRequired,
-  category: PropTypes.string.isRequired,
-  disablePost: PropTypes.func.isRequired,
-  confirmDeletePostModalOpen: PropTypes.bool,
-  openConfirmDeletePostModal: PropTypes.func,
-  closeConfirmDeletePostModal: PropTypes.func,
-  showBody: PropTypes.bool,
-  match: PropTypes.object.isRequired,
-  location: PropTypes.object.isRequired,
-  history: PropTypes.object.isRequired,
+  comments: T.array,
+  postId: T.string.isRequired,
+  category: T.string.isRequired,
+  disablePost: T.func.isRequired,
+  confirmDeletePostModalOpen: T.bool,
+  openConfirmDeletePostModal: T.func,
+  closeConfirmDeletePostModal: T.func,
+  showBody: T.bool,
+  match: T.object.isRequired,
+  location: T.object.isRequired,
+  history: T.object.isRequired,
 };
 
 export default PostFooter;

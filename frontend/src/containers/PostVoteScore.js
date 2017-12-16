@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import T from 'prop-types';
 import { connect } from 'react-redux';
 import { votePostById } from '../redux/modules/posts';
 import { getPostVoteScore } from '../redux/selectors/posts';
@@ -28,9 +28,9 @@ class PostVoteScore extends Component {
 }
 
 PostVoteScore.propTypes = {
-  voteScore: PropTypes.number.isRequired,
-  votePostById: PropTypes.func.isRequired,
-  postId: PropTypes.string.isRequired,
+  voteScore: T.number.isRequired,
+  votePostById: T.func.isRequired,
+  postId: T.string.isRequired,
 };
 
 function mapStateToProps(state, ownProps) {

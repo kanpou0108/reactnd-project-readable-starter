@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import T from 'prop-types';
 import { NavLink } from 'react-router-dom';
 import { capitalize } from '../../utils/helpers';
 
@@ -10,8 +10,8 @@ const Category = ({ name, path }) => (
 );
 
 Category.propTypes = {
-  name: PropTypes.string.isRequired,
-  path: PropTypes.string.isRequired,
+  name: T.string.isRequired,
+  path: T.string.isRequired,
 };
 
 export default Category;

@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import PropTypes from 'prop-types';
+import T from 'prop-types';
 import PostsListContainer from '../containers/PostsListContainer';
 import CategoriesListContainer from '../containers/CategoriesListContainer';
 import PostFormModal from '../containers/PostFormModal';
@@ -47,9 +47,9 @@ const DefaultLayout = ({ component: Component, showSidebar = 'false', isModal = 
 );
 
 DefaultLayout.propTypes = {
-  component: PropTypes.func.isRequired,
-  showSidebar: PropTypes.string,
-  isModal: PropTypes.string,
+  component: T.func.isRequired,
+  showSidebar: T.string,
+  isModal: T.string,
 };
 
 const routes = (

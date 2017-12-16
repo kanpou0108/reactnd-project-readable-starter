@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import T from 'prop-types';
 import { connect } from 'react-redux';
 import CategoriesList from '../components/CategoriesList';
 import ErrorMessage from '../components/ErrorMessage';
@@ -9,10 +9,10 @@ import Spinner from '../components/Spinner';
 
 class CategoriesListContainer extends Component {
   static propTypes = {
-    categories: PropTypes.arrayOf(PropTypes.object).isRequired,
-    fetchAndHandleCategories: PropTypes.func.isRequired,
-    isFetching: PropTypes.bool.isRequired,
-    errorMessage: PropTypes.string,
+    categories: T.arrayOf(T.object).isRequired,
+    fetchAndHandleCategories: T.func.isRequired,
+    isFetching: T.bool.isRequired,
+    errorMessage: T.string,
   }
 
   componentDidMount() {

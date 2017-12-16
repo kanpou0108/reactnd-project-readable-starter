@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import T from 'prop-types';
 import ReactModal from 'react-modal';
 import { FaClose } from 'react-icons/lib/fa';
 
@@ -45,11 +45,11 @@ const Modal = props => (
 );
 
 Modal.propTypes = {
-  children: PropTypes.element,
-  isOpen: PropTypes.bool.isRequired,
-  closeModal: PropTypes.func,
-  contentLabel: PropTypes.string.isRequired,
-  hideCloseButton: PropTypes.bool,
+  children: T.element,
+  isOpen: T.bool.isRequired,
+  closeModal: T.func,
+  contentLabel: T.string.isRequired,
+  hideCloseButton: T.bool,
 };
 
 export default Modal;

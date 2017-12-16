@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import T from 'prop-types';
 
 const SortList = (props) => {
   const onSort = (event) => {
@@ -16,9 +16,9 @@ const SortList = (props) => {
 };
 
 SortList.propTypes = {
-  handleSort: PropTypes.func.isRequired,
-  items: PropTypes.array.isRequired,
-  parentId: PropTypes.string,
+  handleSort: T.func.isRequired,
+  items: T.array.isRequired,
+  parentId: T.string,
 };
 
 export default SortList;
