@@ -49,26 +49,6 @@ button, span {
   outline:none;
 }
 
-/* Posts */
-.subheader {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-bottom:15px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-}
-
-@media (max-width: 560px) {
-  .subheader {
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-
-  .subheader h2 {
-    margin-bottom: 10px;
-  }
-}
-
 /* for IE and Edge */
 select::-ms-expand {
   display: none;
