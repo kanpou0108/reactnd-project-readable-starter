@@ -2,12 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { FaThList } from 'react-icons/lib/fa';
 import Category from '../Category/Category';
-import './CategoriesList.css';
+
+import styles from './styles.css';
 
 const CategoriesList = ({ categories }) => (
   <div>
-    <nav className="nav">
-      <span className="nav-header">
+    <nav className={styles.nav}>
+      <span className={styles.navHeader}>
         <FaThList /> Categories
       </span>
       { categories.map(category => (

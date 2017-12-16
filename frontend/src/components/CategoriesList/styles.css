@@ -6,7 +6,7 @@ nav {
   border-radius: 5px;
 }
 
-nav .nav-header {
+nav .navHeader {
   padding-left: 20px;
   line-height: 60px;
   font-weight: 600;
@@ -30,7 +30,7 @@ nav a {
     margin-bottom: 20px;
   }
 
-  nav .nav-header {
+  nav .navHeader {
     flex: 1 1 100%;
     text-align: center;
     padding-right: 20px;

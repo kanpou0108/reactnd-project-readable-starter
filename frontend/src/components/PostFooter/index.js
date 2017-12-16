@@ -5,6 +5,7 @@ import {
   FaCommentingO, FaEdit,
   FaTimesCircle } from 'react-icons/lib/fa';
 import ConfirmModal from '../ConfirmModal/ConfirmModal';
+
 import styles from './styles.css';
 
 const PostFooter = (props) => {

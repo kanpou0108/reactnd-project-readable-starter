@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import CategoriesList from '../components/CategoriesList/CategoriesList';
+import CategoriesList from '../components/CategoriesList';
 import ErrorMessage from '../components/ErrorMessage/ErrorMessage';
 import * as fromCategories from '../redux/modules/categories';
 import * as categoriesSelectors from '../redux/selectors/categories';

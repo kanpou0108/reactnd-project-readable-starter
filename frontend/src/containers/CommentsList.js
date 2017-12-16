@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Comment from '../components/Comment/Comment';
 import CommentForm from '../components/CommentForm/CommentForm';
-import SortList from '../components/SortList/SortList';
+import SortList from '../components/SortList';
 import Spinner from '../components/Spinner/Spinner';
 import ErrorMessage from '../components/ErrorMessage/ErrorMessage';
 import { getIsCommentAddFormOpen } from '../redux/selectors/posts';
