@@ -5,7 +5,8 @@ import { FaUser } from 'react-icons/lib/fa';
 import { convertUnixTimestampToDate } from '../../utils/helpers';
 import PostFooterContainer from '../../containers/PostFooterContainer';
 import PostVoteScore from '../../containers/PostVoteScore';
-import './Post.css';
+
+import styles from './styles.css';
 
 const Post = ({
   id,
@@ -18,13 +19,13 @@ const Post = ({
   location,
   match,
 }) => (
-  <div className="post">
+  <div className={styles.post}>
     <PostVoteScore postId={id} />
-    <div className="post-content">
-      <div className="post-categories">
-        <span className="post-category">{category}</span>
+    <div className={styles.postContent}>
+      <div className={styles.postCategories}>
+        <span className={styles.postCategory}>{category}</span>
       </div>
-      <div className="post-title">
+      <div className={styles.post-title}>
         <h2>
           <Link
             to={{ pathname: `/${category}/${id}`,
@@ -34,11 +35,11 @@ const Post = ({
           </Link>
         </h2>
       </div>
-      <div className="post-details">
+      <div className={styles.postDetails}>
         <span>{'Posted by '}<FaUser />{` ${author} on ${convertUnixTimestampToDate(timestamp)}`}</span>
       </div>
       { showBody && (
-        <div className="post-body">
+        <div className={styles.postBody}>
           <p>{body}</p>
         </div>)
       }

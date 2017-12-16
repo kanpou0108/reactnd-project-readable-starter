@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { FaPlus } from 'react-icons/lib/fa';
-import Post from '../Post/Post';
+import Post from '../Post';
 import SortList from '../SortList/SortList';
 import { capitalize } from '../../utils/helpers';
 

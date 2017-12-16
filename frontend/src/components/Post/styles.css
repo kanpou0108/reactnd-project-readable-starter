@@ -5,7 +5,7 @@
   padding: 20px 10px;
 }
 
-.post-content {
+.postContent {
   display: flex;
   flex-direction: column;
   align-content: flex-start;
@@ -14,7 +14,7 @@
 }
 
 @media (max-width: 560px) {
-  .post-content {
+  .postContent {
     display: flex;
     flex-direction: column;
     align-content: flex-start;
@@ -23,7 +23,7 @@
   }
 }
 
-.post-category {
+.postCategory {
   padding: 7px;
   background: rgba(244, 241, 239, 0.8);
   border-radius: 5px;
@@ -31,12 +31,12 @@
   font-size: 0.8em;
 }
 
-.post-title {
+.postTitle {
   color: rgba(0,0,0,.6);
   font-size: 1.2em;
 }
 
-.post-body {
+.postBody {
   background-color: rgb(245, 244, 244);
   border: 1px solid rgb(120, 120, 120);
   border-radius: 8px;
