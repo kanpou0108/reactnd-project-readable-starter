@@ -30,7 +30,7 @@ const Comment = (props) => {
     props.closeConfirmDeleteCommentModal();
   };
   return (
-    <div className="comment">
+    <div className={styles.comment}>
       <CommentVoteScore commentId={props.comment.id} />
       {props.isCommentEditFormOpen
         ? (<div className={styles.commentContent}>
