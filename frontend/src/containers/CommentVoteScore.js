@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { voteCommentById } from '../redux/modules/comments';
 import { getCommentVoteScore } from '../redux/selectors/comments';
-import VoteScore from '../components/VoteScore/VoteScore';
+import VoteScore from '../components/VoteScore';
 
 class CommentVoteScore extends Component {
   handleVoteUpClick = (event) => {

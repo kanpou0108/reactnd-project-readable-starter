@@ -1,25 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { FaCaretSquareODown, FaCaretSquareOUp } from 'react-icons/lib/fa';
-import './VoteScore.css';
+
+import styles from './styles.css';
 
 const VoteScore = (props) => {
   const { score, onVoteUp, onVoteDown } = props;
   return (
-    <div className="vote-score-wrapper">
+    <div className={styles.voteScoreWrapper}>
       <span
         role="button"
-        className="vote-control-up"
+        className={styles.voteControlUp}
         tabIndex="0"
         onClick={onVoteUp}
       >
         <FaCaretSquareOUp />
       </span>
-      <div className={`vote-score ${score < 0 ? 'negative' : 'positive'}`}><span>{score}</span></div>
+      <div className={`${styles.voteScore} ${score < 0 ? styles.negative : styles.positive}`}><span>{score}</span></div>
       <span
         role="button"
         tabIndex="0"
-        className="vote-control-down"
+        className={styles.voteControlDown}
         onClick={onVoteDown}
       >
         <FaCaretSquareODown />
