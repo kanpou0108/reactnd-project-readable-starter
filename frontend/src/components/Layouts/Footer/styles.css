@@ -1,0 +1,9 @@
+.appFooter {
+  padding: 20px;
+  text-align: center;
+  font-size: 1em;
+}
+
+.appFooter a {
+  font-size: 1.5em;
+}
