@@ -7,7 +7,7 @@ import {
   FaUser } from 'react-icons/lib/fa';
 import CommentVoteScore from '../../containers/CommentVoteScore';
 import CommentForm from '../CommentForm';
-import ConfirmModal from '../ConfirmModal/ConfirmModal';
+import ConfirmModal from '../ConfirmModal';
 import * as fromComments from '../../redux/modules/comments';
 import * as commentsSelector from '../../redux/selectors/comments';
 import * as uiSelector from '../../redux/selectors/ui';

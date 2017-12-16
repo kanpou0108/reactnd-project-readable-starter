@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import {
   FaCommentingO, FaEdit,
   FaTimesCircle } from 'react-icons/lib/fa';
-import ConfirmModal from '../ConfirmModal/ConfirmModal';
+import ConfirmModal from '../ConfirmModal';
 
 import styles from './styles.css';
 

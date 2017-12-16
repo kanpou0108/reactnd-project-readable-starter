@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Modal from '../Modal/Modal';
-import './ConfirmModal.css';
+
+import styles from './styles.css';
 
 class ConfirmModal extends Component {
   handleCloseModal = () => {
@@ -15,9 +16,9 @@ class ConfirmModal extends Component {
           hideCloseButton
           isOpen={this.props.isOpen}
         >
-          <div className="confirm-modal">
-            <p className="confirm-modal-message">{this.props.message || 'Are you sure?'}</p>
-            <div className="confirm-modal-button-group">
+          <div className={styles.confirmModal}>
+            <p className={styles.confirmModalMessage}>{this.props.message || 'Are you sure?'}</p>
+            <div className={styles.confirmModalButtonGroup}>
               <button type="button" onClick={this.props.onConfirm}>
               Yes
               </button>

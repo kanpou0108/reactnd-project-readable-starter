@@ -1,17 +1,17 @@
-.confirm-modal {
+.confirmModal {
   display: flex;
   flex-direction: column;
 }
 
-.confirm-modal-message {
+.confirmModalMessage {
   font-size: 1.4em;
 }
 
-.confirm-modal-button-group>* {
+.confirmModalButtonGroup>* {
   margin: 10px;
 }
 
-.confirm-modal-button-group button {
+.confirmModalButtonGroup button {
     white-space: nowrap;
     display: inline-block;
     border-radius: 5px;
@@ -24,6 +24,6 @@
     cursor: pointer;
   }
 
-.confirm-modal button:hover {
+.confirmModal button:hover {
       background-image: linear-gradient(#fff,#eee);
   }
