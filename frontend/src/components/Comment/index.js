@@ -13,7 +13,8 @@ import * as commentsSelector from '../../redux/selectors/comments';
 import * as uiSelector from '../../redux/selectors/ui';
 import * as fromModal from '../../redux/modules/modal';
 import { convertUnixTimestampToDate } from '../../utils/helpers';
-import './Comment.css';
+
+import styles from './styles.css';
 
 const Comment = (props) => {
   const toggleCommentEdit = (event) => {
@@ -32,7 +33,7 @@ const Comment = (props) => {
     <div className="comment">
       <CommentVoteScore commentId={props.comment.id} />
       {props.isCommentEditFormOpen
-        ? (<div className="comment-content">
+        ? (<div className={styles.commentContent}>
           <CommentForm
             commentId={props.comment.id}
             initialValues={props.comment}
@@ -40,14 +41,14 @@ const Comment = (props) => {
             onToggleCommentEdit={toggleCommentEdit}
           /></div>)
         : (
-          <div className="comment-content">
-            <div className="comment-header">
+          <div className={styles.commentContent}>
+            <div className={styles.commentHeader}>
               <FaUser />{` ${props.comment.author} commented on ${convertUnixTimestampToDate(props.comment.timestamp)}`}
             </div>
-            <div className="comment-body">{props.comment.body}</div>
-            <div className="comment-footer">
-              <span className="comment-edit-link"><FaEdit /><a role="button" tabIndex="0" onClick={toggleCommentEdit}>{'Edit'}</a></span>
-              <span className="comment-delete-link"><FaTimesCircle /><a href="" role="button" tabIndex="0" onClick={handleDeleteClick}>{'Delete'}</a></span>
+            <div className={styles.commentBody}>{props.comment.body}</div>
+            <div className={styles.commentFooter}>
+              <span className={styles.commentEditLink}><FaEdit /><a role="button" tabIndex="0" onClick={toggleCommentEdit}>{'Edit'}</a></span>
+              <span className={styles.commentDeleteLink}><FaTimesCircle /><a href="" role="button" tabIndex="0" onClick={handleDeleteClick}>{'Delete'}</a></span>
             </div>
           </div>
         )}

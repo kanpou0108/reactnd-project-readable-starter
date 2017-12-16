@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { FaThList } from 'react-icons/lib/fa';
-import Category from '../Category/Category';
+import Category from '../Category';
 
 import styles from './styles.css';
 
