@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import ErrorMessage from '../components/ErrorMessage/ErrorMessage';
+import ErrorMessage from '../components/ErrorMessage';
 import PostsList from '../components/PostsList';
 import * as fromPosts from '../redux/modules/posts';
 import Spinner from '../components/Spinner/Spinner';
