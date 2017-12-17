@@ -4,7 +4,7 @@ import { Link, withRouter } from 'react-router-dom';
 import { FaUser } from 'react-icons/lib/fa';
 import { convertUnixTimestampToDate } from '../../utils/helpers';
 import PostFooter from '../PostFooter';
-import PostVoteScore from '../../components/PostVoteScore';
+import VoteScore from '../../components/VoteScore';
 
 import styles from './styles.css';
 
@@ -20,7 +20,7 @@ const Post = ({
   match,
 }) => (
   <div className={styles.post}>
-    <PostVoteScore postId={id} />
+    <VoteScore postId={id} />
     <div className={styles.postContent}>
       <div className={styles.postCategories}>
         <span className={styles.postCategory}>{category}</span>

@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import T from 'prop-types';
-import { connect } from 'react-redux';
-import { votePostById } from '../../redux/modules/posts';
-import { getPostVoteScore } from '../../redux/selectors/posts';
-import VoteScore from '../VoteScore';
+
+import View from './View';
 
 class PostVoteScore extends Component {
   handleVoteUpClick = (event) => {
@@ -18,7 +16,7 @@ class PostVoteScore extends Component {
   render() {
     const { voteScore } = this.props;
     return (
-      <VoteScore
+      <View
         score={voteScore}
         onVoteUp={this.handleVoteUpClick}
         onVoteDown={this.handleVoteDownClick}
@@ -33,15 +31,4 @@ PostVoteScore.propTypes = {
   postId: T.string.isRequired,
 };
 
-const mapStateToProps = (state, ownProps) => {
-  const postId = ownProps.postId;
-  return {
-    postId,
-    voteScore: getPostVoteScore(state, postId),
-  };
-};
-
-export default connect(
-  mapStateToProps,
-  { votePostById }
-)(PostVoteScore);
+export default PostVoteScore;
