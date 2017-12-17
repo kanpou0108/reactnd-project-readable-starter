@@ -3,7 +3,7 @@ import T from 'prop-types';
 import { Link, withRouter } from 'react-router-dom';
 import { FaUser } from 'react-icons/lib/fa';
 import { convertUnixTimestampToDate } from '../../utils/helpers';
-import PostFooterContainer from '../PostFooterContainer';
+import PostFooter from '../PostFooter';
 import PostVoteScore from '../../components/PostVoteScore';
 
 import styles from './styles.css';
@@ -43,7 +43,7 @@ const Post = ({
           <p>{body}</p>
         </div>)
       }
-      <PostFooterContainer
+      <PostFooter
         postId={id}
         category={category}
         showBody={showBody}
