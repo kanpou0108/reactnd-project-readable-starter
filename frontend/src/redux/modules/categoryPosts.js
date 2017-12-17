@@ -6,8 +6,9 @@ import { FETCHING_POSTS,
   EDIT_POST,
   DELETE_POST,
   SORT_POSTS } from './posts';
+
 /* eslint-disable no-case-declarations */
-function categoryPosts(category) {
+const categoryPosts = (category) => {
   const ids = (state = [], action) => {
     switch (action.type) {
       case FETCHING_POSTS_SUCCESS:

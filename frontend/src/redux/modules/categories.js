@@ -78,7 +78,7 @@ export const allCategories = combineReducers({
   errorMessage,
 });
 
-export default (state = {}, action) => {
+export default categories = (state = {}, action) => {
   switch (action.type) {
     case FETCHING_CATEGORIES_SUCCESS:
       return {
