@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import T from 'prop-types';
 
-import View from './View';
+import VoteScore from '../VoteScore';
 
 class PostVoteScore extends Component {
   handleVoteUpClick = (event) => {
@@ -16,7 +16,7 @@ class PostVoteScore extends Component {
   render() {
     const { voteScore } = this.props;
     return (
-      <View
+      <VoteScore
         score={voteScore}
         onVoteUp={this.handleVoteUpClick}
         onVoteDown={this.handleVoteDownClick}
