@@ -1,14 +1,10 @@
 import React, { Component } from 'react';
 import T from 'prop-types';
-import { connect } from 'react-redux';
+
 import { v4 } from 'uuid';
-import Modal from '../components/Modal';
-import PostForm from '../components/PostForm';
-import { openPostModal, closePostModal } from '../redux/modules/modal';
-import { saveNewPost, updatePost } from '../redux/modules/posts';
-import { getPost } from '../redux/selectors/posts';
-import { getPostModalOpen } from '../redux/selectors/ui';
-import { redirectToReferrerOrHome } from '../utils/helpers';
+import Modal from '../Modal';
+import PostForm from '../PostForm';
+import { redirectToReferrerOrHome } from '../../utils/helpers';
 
 class PostFormModal extends Component {
   componentDidMount() {
@@ -68,15 +64,4 @@ PostFormModal.propTypes = {
   initialFormValues: T.object,
 };
 
-function mapStateToProps(state, ownProps) {
-  const postId = ownProps.match.params.id;
-  return {
-    postModalOpen: getPostModalOpen(state),
-    initialFormValues: getPost(state, postId),
-  };
-}
-
-export default connect(
-  mapStateToProps,
-  { openPostModal, closePostModal, saveNewPost, updatePost },
-)(PostFormModal);
+export default PostFormModal;

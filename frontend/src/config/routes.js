@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import T from 'prop-types';
 import PostsListContainer from '../containers/PostsListContainer';
 import CategoriesListContainer from '../components/CategoriesListContainer';
-import PostFormModal from '../containers/PostFormModal';
+import PostFormModal from '../components/PostFormModal';
 import PostDetailModal from '../components/PostDetailModal';
 import { Header, Footer, Sidebar } from '../components/Layouts';
 
