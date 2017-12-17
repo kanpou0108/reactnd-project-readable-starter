@@ -37,7 +37,7 @@ export const fetchAndHandleCategories = () => (dispatch) => {
 };
 
 /* Categories Reducers */
-function names(state = [], action) {
+const names = (state = [], action) => {
   switch (action.type) {
     case FETCHING_CATEGORIES_SUCCESS :
       return [
@@ -49,7 +49,7 @@ function names(state = [], action) {
   }
 }
 
-function isFetching(state = false, action) {
+const isFetching = (state = false, action) => {
   switch (action.type) {
     case FETCHING_CATEGORIES:
       return true;
@@ -61,7 +61,7 @@ function isFetching(state = false, action) {
   }
 }
 
-function errorMessage(state = null, action) {
+const errorMessage = (state = null, action) => {
   switch (action.type) {
     case FETCHING_CATEGORIES_SUCCESS:
       return null;
@@ -78,7 +78,7 @@ export const allCategories = combineReducers({
   errorMessage,
 });
 
-export default function categories(state = {}, action) {
+export default (state = {}, action) => {
   switch (action.type) {
     case FETCHING_CATEGORIES_SUCCESS:
       return {
