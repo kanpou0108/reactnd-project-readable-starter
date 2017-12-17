@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import T from 'prop-types';
-import PostsListContainer from '../PostsListContainer';
-import CategoriesListContainer from '../CategoriesListContainer';
+import PostsList from '../PostsList';
+import CategoriesList from '../CategoriesList';
 import PostFormModal from '../PostFormModal';
 import PostDetailModal from '../PostDetailModal';
 import { Header, Footer, Sidebar } from '../Layouts';
@@ -24,13 +24,13 @@ const DefaultLayout = ({ component: Component, showSidebar = 'false', isModal = 
           <div className={styles.appContainer}>
             {showSidebar === 'true' &&
             (<Sidebar>
-              <CategoriesListContainer {...matchProps} />
+              <CategoriesList {...matchProps} />
             </Sidebar>)}
             <div className={styles.innerContainer}>
               {isModal === 'true' ?
                 (
                   <div>
-                    <PostsListContainer {...prevMatchProps} />
+                    <PostsList {...prevMatchProps} />
                     <Component {...matchProps} />
                   </div>
                 )
@@ -73,13 +73,13 @@ const routes = (
         exact
         path="/"
         showSidebar="true"
-        component={PostsListContainer}
+        component={PostsList}
       />
       <DefaultLayout
         exact
         path="/:category"
         showSidebar="true"
-        component={PostsListContainer}
+        component={PostsList}
       />
       <DefaultLayout
         exact

@@ -1,25 +1,17 @@
-import React from 'react';
-import T from 'prop-types';
-import { FaThList } from 'react-icons/lib/fa';
-import Category from '../Category';
+import { connect } from 'react-redux';
 
-import styles from './styles.css';
+import * as fromCategories from '../../redux/modules/categories';
+import * as categoriesSelectors from '../../redux/selectors/categories';
 
-const CategoriesList = ({ categories }) => (
-  <div>
-    <nav className={styles.nav}>
-      <span className={styles.navHeader}>
-        <FaThList /> Categories
-      </span>
-      { categories.map(category => (
-        <Category key={category.name} {...category} />
-      ))}
-    </nav>
-  </div>
-);
+import Container from './Container';
 
-CategoriesList.propTypes = {
-  categories: T.arrayOf(T.object).isRequired,
-};
+const mapStateToProps = (state) => ({
+  categories: categoriesSelectors.getCategories(state),
+  isFetching: categoriesSelectors.getIsFetching(state),
+  errorMessage: categoriesSelectors.getErrorMessage(state),
+});
 
-export default CategoriesList;
+export default connect(
+  mapStateToProps,
+  { fetchAndHandleCategories: fromCategories.fetchAndHandleCategories },
+)(Container);

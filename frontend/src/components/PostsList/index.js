@@ -1,41 +1,29 @@
-import React from 'react';
-import T from 'prop-types';
-import { Link } from 'react-router-dom';
-import { FaPlus } from 'react-icons/lib/fa';
-import Post from '../Post';
-import SortList from '../SortList';
-import { capitalize } from '../../utils/helpers';
+import { connect } from 'react-redux';
 
-import styles from './styles.css';
+import * as fromPosts from '../../redux/modules/posts';
+import {
+  makeGetPostsByCategory,
+  getIsFetching,
+  getErrorMessage,
+  getShouldFetch,
+} from '../../redux/selectors/posts';
 
-const PostsList = ({ posts, category, handleSort, location, match }) => (
-  <div>
-    <div className={styles.subheader}>
-      <h2><Link to="/">All Categories</Link>{`${category !== 'all' ? ` > ${capitalize(category)}` : ''}` }</h2>
-      <SortList items={posts} parentId={category} handleSort={handleSort} />
-    </div>
-    <div className={styles.listPosts}>
-      {posts.length > 0 ? posts.map(post => (
-        <Post key={post.id} {...post} />
-      ))
-        : <p>There are no posts to display</p>}
+import Container from './Container';
 
-    </div>
-    <div className={styles.addNewPost}>
-      <Link to={{ pathname: '/posts/new', state: { prevPath: location, prevMatch: match } }}>
-        <FaPlus />
-        <span>{'Add new post'}</span>
-      </Link>
-    </div>
-  </div>
-);
+const mapStateToProps = (state, ownProps) => {
+  const category = ownProps.match.params.category || 'all';
+  const getPostsByCategory = makeGetPostsByCategory();
+  return {
+    posts: getPostsByCategory(state, category),
+    isFetching: getIsFetching(state, category),
+    errorMessage: getErrorMessage(state, category),
+    shouldFetch: getShouldFetch(state, category),
+    category,
+  };
+}
 
-PostsList.propTypes = {
-  posts: T.arrayOf(T.object).isRequired,
-  category: T.string.isRequired,
-  handleSort: T.func.isRequired,
-  location: T.object.isRequired,
-  match: T.object.isRequired,
-};
-
-export default PostsList;
+export default connect(
+  mapStateToProps,
+  { fetchAndHandlePosts: fromPosts.fetchAndHandlePosts,
+    handleSort: fromPosts.handleSort },
+)(Container);

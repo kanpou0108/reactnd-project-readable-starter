@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import T from 'prop-types';
 
 import ErrorMessage from '../ErrorMessage';
-import PostsList from '../PostsList';
 import Spinner from '../Spinner';
+
+import View from './View';
 
 class PostsListContainer extends Component {
   static propTypes = {
@@ -43,7 +44,7 @@ class PostsListContainer extends Component {
       <div>
         {isFetching && !errorMessage
           ? <Spinner />
-          : <PostsList
+          : <View
             posts={posts}
             category={category}
             handleSort={handleSort}

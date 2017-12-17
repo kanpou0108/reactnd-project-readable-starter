@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import T from 'prop-types';
 
-import CategoriesList from '../CategoriesList';
+import View from './View';
 import ErrorMessage from '../ErrorMessage';
 import Spinner from '../Spinner';
 
@@ -27,7 +27,7 @@ class CategoriesListContainer extends Component {
       <div>
         {isFetching && !errorMessage
           ? <Spinner />
-          : <CategoriesList categories={categories} />
+          : <View categories={categories} />
         }
         {errorMessage && <ErrorMessage error={errorMessage} onRetry={this.onRetry} />}
       </div>
