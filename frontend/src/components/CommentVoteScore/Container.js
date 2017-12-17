@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import T from 'prop-types';
 
-import VoteScore from '../VoteScore';
+import VoteScore from '../VoteScore/View';
 
 class CommentVoteScore extends Component {
   handleVoteUpClick = (event) => {
