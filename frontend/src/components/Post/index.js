@@ -4,7 +4,7 @@ import { Link, withRouter } from 'react-router-dom';
 import { FaUser } from 'react-icons/lib/fa';
 import { convertUnixTimestampToDate } from '../../utils/helpers';
 import PostFooterContainer from '../PostFooterContainer';
-import PostVoteScore from '../../containers/PostVoteScore';
+import PostVoteScore from '../../components/PostVoteScore';
 
 import styles from './styles.css';
 
