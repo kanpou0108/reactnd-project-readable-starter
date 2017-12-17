@@ -1,16 +1,9 @@
 import React, { Component } from 'react';
 import T from 'prop-types';
-import { connect } from 'react-redux';
-import ErrorMessage from '../components/ErrorMessage';
-import PostsList from '../components/PostsList';
-import * as fromPosts from '../redux/modules/posts';
-import Spinner from '../components/Spinner';
-import {
-  makeGetPostsByCategory,
-  getIsFetching,
-  getErrorMessage,
-  getShouldFetch,
-} from '../redux/selectors/posts';
+
+import ErrorMessage from '../ErrorMessage';
+import PostsList from '../PostsList';
+import Spinner from '../Spinner';
 
 class PostsListContainer extends Component {
   static propTypes = {
@@ -68,20 +61,4 @@ class PostsListContainer extends Component {
   }
 }
 
-function mapStateToProps(state, ownProps) {
-  const category = ownProps.match.params.category || 'all';
-  const getPostsByCategory = makeGetPostsByCategory();
-  return {
-    posts: getPostsByCategory(state, category),
-    isFetching: getIsFetching(state, category),
-    errorMessage: getErrorMessage(state, category),
-    shouldFetch: getShouldFetch(state, category),
-    category,
-  };
-}
-
-export default connect(
-  mapStateToProps,
-  { fetchAndHandlePosts: fromPosts.fetchAndHandlePosts,
-    handleSort: fromPosts.handleSort },
-)(PostsListContainer);
+export default PostsListContainer;
