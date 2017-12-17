@@ -167,7 +167,7 @@ export const handleSort = (items, postId, sortBy) => (dispatch) => {
   }
 };
 
-export default function comments(state = {}, action) {
+const comments = (state = {}, action) => {
   switch (action.type) {
     case FETCHING_COMMENTS_SUCCESS:
     case ADD_NEW_COMMENT:
@@ -208,9 +208,11 @@ export default function comments(state = {}, action) {
     default:
       return state;
   }
-}
+};
 
-export function commentsByPost(state = {}, action) {
+export default comments;
+
+export const commentsByPost = (state = {}, action) => {
   switch (action.type) {
     case FETCHING_COMMENTS:
     case FETCHING_COMMENTS_SUCCESS:
