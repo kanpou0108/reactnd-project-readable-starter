@@ -6,7 +6,7 @@ import thunk from 'redux-thunk';
 import { reducer as formReducer } from 'redux-form';
 import * as reducers from './redux/modules';
 import './index.css';
-import routes from './config/routes';
+import App from './components/App';
 
 /* eslint-disable no-underscore-dangle */
 const store = createStore(
@@ -18,7 +18,7 @@ const store = createStore(
 
 ReactDOM.render(
   <Provider store={store}>
-    { routes }
+    {App}
   </Provider>,
   document.getElementById('root'),
 );

@@ -1,11 +1,11 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import T from 'prop-types';
-import PostsListContainer from '../components/PostsListContainer';
-import CategoriesListContainer from '../components/CategoriesListContainer';
-import PostFormModal from '../components/PostFormModal';
-import PostDetailModal from '../components/PostDetailModal';
-import { Header, Footer, Sidebar } from '../components/Layouts';
+import PostsListContainer from '../PostsListContainer';
+import CategoriesListContainer from '../CategoriesListContainer';
+import PostFormModal from '../PostFormModal';
+import PostDetailModal from '../PostDetailModal';
+import { Header, Footer, Sidebar } from '../Layouts';
 
 import styles from './styles.css';
 
