@@ -31,7 +31,7 @@ export const closeConfirmDeleteCommentModal = () => ({
   type: CLOSE_CONFIRM_DELETE_COMMENT_MODAL,
 });
 
-function postModalOpen(state = false, action) {
+const postModalOpen = (state = false, action) => {
   switch (action.type) {
     case OPEN_POST_MODAL:
       return true;
@@ -40,9 +40,9 @@ function postModalOpen(state = false, action) {
     default:
       return state;
   }
-}
+};
 
-function confirmDeletePostModalOpen(state = false, action) {
+const confirmDeletePostModalOpen = (state = false, action) => {
   switch (action.type) {
     case OPEN_CONFIRM_DELETE_POST_MODAL:
       return true;
@@ -51,9 +51,9 @@ function confirmDeletePostModalOpen(state = false, action) {
     default:
       return state;
   }
-}
+};
 
-function confirmDeleteCommentModalOpen(state = false, action) {
+const confirmDeleteCommentModalOpen = (state = false, action) => {
   switch (action.type) {
     case OPEN_CONFIRM_DELETE_COMMENT_MODAL:
       return true;
@@ -62,7 +62,7 @@ function confirmDeleteCommentModalOpen(state = false, action) {
     default:
       return state;
   }
-}
+};
 
 export default combineReducers({
   postModalOpen,

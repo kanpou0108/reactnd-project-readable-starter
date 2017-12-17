@@ -8,7 +8,7 @@ import {
   SORT_COMMENTS,
 } from './comments';
 
-function postComments(postId) {
+const postComments = (postId) => {
   const ids = (state = [], action) => {
     switch (action.type) {
       case FETCHING_COMMENTS_SUCCESS:
@@ -84,6 +84,6 @@ function postComments(postId) {
     errorMessage,
     shouldFetch,
   });
-}
+};
 
 export default postComments;

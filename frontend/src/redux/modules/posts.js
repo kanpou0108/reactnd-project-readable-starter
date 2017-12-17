@@ -170,7 +170,7 @@ export const handleSort = (items, parentId, sortBy) => (dispatch) => {
   }
 };
 
-export default function posts(state = {}, action) {
+const posts = (state = {}, action) => {
   switch (action.type) {
     case FETCHING_POSTS_SUCCESS:
     case ADD_NEW_POST:
@@ -244,7 +244,9 @@ export default function posts(state = {}, action) {
     default:
       return state;
   }
-}
+};
+
+export default posts;
 
 const categoryPostsInitialState = {
   all: {
@@ -255,7 +257,7 @@ const categoryPostsInitialState = {
   },
 };
 
-export function postsByCategory(state = categoryPostsInitialState, action) {
+export const postsByCategory = (state = categoryPostsInitialState, action) => {
   switch (action.type) {
     case FETCHING_POSTS:
     case FETCHING_POSTS_SUCCESS:
