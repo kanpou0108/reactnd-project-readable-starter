@@ -3,7 +3,7 @@ import T from 'prop-types';
 import { Link, withRouter } from 'react-router-dom';
 import { FaUser } from 'react-icons/lib/fa';
 import { convertUnixTimestampToDate } from '../../utils/helpers';
-import PostFooterContainer from '../../containers/PostFooterContainer';
+import PostFooterContainer from '../PostFooterContainer';
 import PostVoteScore from '../../containers/PostVoteScore';
 
 import styles from './styles.css';
