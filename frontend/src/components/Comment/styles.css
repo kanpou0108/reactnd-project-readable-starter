@@ -1,0 +1,44 @@
+.comment {
+  display: flex;
+  padding: 10px;
+  align-items: flex-start;
+}
+
+.comment .commentContent {
+  margin-left: 15px;
+  flex: 1;
+}
+
+.comment .voteScoreWrapper {
+  font-size: 1.2em;
+}
+
+.comment .voteScore {
+  font-size: 1.2em;
+  min-width: 45px;
+}
+
+.comment .voteControlUp, .comment .voteControlDown {
+  font-size: 25px;
+}
+
+.comment .commentBody {
+  border: 1px solid rgb(120, 120, 120);
+  border-radius: 8px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.comment .commentFooter>* {
+  margin-left: 10px;
+}
+
+.comment .commentFooter a {
+  margin-left: 4px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.comment .commentFooter a:hover {
+  text-decoration: none;
+}

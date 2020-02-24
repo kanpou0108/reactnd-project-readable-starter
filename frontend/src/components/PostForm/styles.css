@@ -1,0 +1,130 @@
+textarea {
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;
+  resize: none;
+}
+
+button, input, select, textarea {
+    outline: none;
+}
+
+h1 {
+  margin-left: 10px;
+}
+
+hr {
+  margin: 10px 0 15px 0;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #ccc;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color: #ccc;
+   opacity: 1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color: #ccc;
+   opacity: 1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: #ccc;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+   color: #ccc;
+}
+
+.postForm>div {
+  display: flex;
+  justify-content: center;
+  margin: 10px 5px;
+  font-size:16px;
+}
+
+.postForm>div>label {
+  font-weight: 700;
+  margin-right: 10px;
+  min-width: 100px;
+  text-align: right;
+  padding: 6px 9px;
+}
+
+@media (max-width: 992px) {
+  .postForm>div {
+    flex-direction: column;
+  }
+
+  .postForm>div>label {
+    text-align: left;
+  }
+}
+
+.postForm>div>div {
+  flex: 1;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.postForm>div>div>*:first-child {
+  flex: 1;
+  font-size: 16px;
+  padding: 10px 10px;
+  margin: 3px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.postForm>div>div>*:first-child.hasError {
+  border: 1px solid rgb(255, 113, 113);
+}
+
+.postForm>div>div>.validationError {
+  color: red;
+  font-weight: 400;
+}
+
+.postForm>div button {
+  margin: 10px;
+  cursor: pointer;
+}
+
+.postForm>div button[type=submit] {
+    white-space: nowrap;
+    display: inline-block;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 20px;
+    color: #fff;
+    background: linear-gradient(
+      to top right,
+      blue, rgb(65, 131, 196)
+    );
+    border: 1px solid #285f8f;
+  }
+
+.postForm>div button[type=button] {
+    white-space: nowrap;
+    display: inline-block;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 20px;
+    color: #fff;
+    background-image: linear-gradient(#fff,#d5d5d5);
+    border: 1px solid #d5d5d5;
+    color: #000;
+  }
+
+.postForm>div button[type=button]:hover {
+      background-image: linear-gradient(#fff,#eee);
+  }
+
+.postForm>div button[type=button][disabled] {
+    opacity: .6;
+    cursor: not-allowed;
+}
+
+.postForm>div button[type=submit][disabled] {
+    opacity: .6;
+    cursor: not-allowed;
+}

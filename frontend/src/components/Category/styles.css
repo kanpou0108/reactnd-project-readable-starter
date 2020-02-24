@@ -1,0 +1,19 @@
+.category {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.text {
+  min-width: 80px;
+  margin-left: 20px;
+}
+
+@media (max-width: 992px) {
+  .category {
+    justify-content: center;
+  }
+  .text {
+    margin-left: 0px;
+  }
+}

@@ -1,0 +1,56 @@
+.listPosts p {
+  margin: 10px;
+  font-size: 1.2em;
+}
+.addNewPost {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+}
+
+.addNewPost a {
+  display: block;
+  padding: 15px 10px;
+  font-size: 1em;
+  color: white;
+  border-radius: 10px;
+  background: rgb(65, 131, 196);
+  box-shadow: 1px 1px 0.5px 0.8px rgba(0, 0, 0, .2);
+  border: 1px solid rgba(0,0,0,.2);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* Posts */
+.subheader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom:15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 992px) {
+  .addNewPost a {
+    font-size: 1.5em;
+    border-radius: 50%;
+    padding: 5px 5px;
+    height:45px;
+    width: 45px;
+    text-align:center;
+  }
+
+  .addNewPost a span {
+    font-size: 0;
+  }
+
+  .subheader {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .subheader h2 {
+    margin-bottom: 10px;
+  }
+}
+

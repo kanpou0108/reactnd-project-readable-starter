@@ -1,0 +1,29 @@
+.confirmModal {
+  display: flex;
+  flex-direction: column;
+}
+
+.confirmModalMessage {
+  font-size: 1.4em;
+}
+
+.confirmModalButtonGroup>* {
+  margin: 10px;
+}
+
+.confirmModalButtonGroup button {
+    white-space: nowrap;
+    display: inline-block;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 1.2em;
+    color: #fff;
+    background-image: linear-gradient(#fff,#d5d5d5);
+    border: 1px solid #d5d5d5;
+    color: #000;
+    cursor: pointer;
+  }
+
+.confirmModal button:hover {
+      background-image: linear-gradient(#fff,#eee);
+  }

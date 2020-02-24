@@ -1,0 +1,26 @@
+.postFooter span,
+.postFooter a {
+  margin-left: 5px;
+}
+
+.postFooter svg {
+  font-size:1.4em;
+  margin-left: 10px;
+}
+
+.postFooter a:hover {
+  text-decoration:none;
+  color: rgb(168, 168, 168);
+}
+
+.comment {
+  text-decoration:none;
+}
+
+.edit {
+  text-decoration: underline;
+}
+
+.delete {
+  text-decoration: underline;
+}
