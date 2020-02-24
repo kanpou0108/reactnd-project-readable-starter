@@ -4,28 +4,30 @@ if (!token) {
   token = localStorage.token;
 }
 
+const API_HOST = 'https://mighty-bayou-23270.herokuapp.com';
+
 const headers = {
   Accept: 'application/json',
   Authorization: token,
 };
 
 export const getAllCategories = () =>
-  fetch('/categories', { headers })
+  fetch(`${API_HOST}/categories`, { headers })
     .then(res => res.json())
     .then(data => data.categories);
 
 export const getPostsByCategory = category =>
-  fetch(`/${category}/posts`, { headers })
+  fetch(`${API_HOST}/${category}/posts`, { headers })
     .then(res => res.json())
     .then(data => data);
 
 export const getAllPosts = () =>
-  fetch('/posts', { headers })
+  fetch(`${API_HOST}/posts`, { headers })
     .then(res => res.json())
     .then(data => data);
 
 export const addNewPost = newPost =>
-  fetch('/posts', {
+  fetch(`${API_HOST}/posts`, {
     method: 'POST',
     headers: {
       ...headers,
@@ -36,19 +38,19 @@ export const addNewPost = newPost =>
     .then(data => data);
 
 export const getPostById = postId =>
-  fetch(`/posts/${postId}`, { headers })
+  fetch(`${API_HOST}/posts/${postId}`, { headers })
     .then(res => res.json())
     .then(data => data);
 
 export const deletePostById = postId =>
-  fetch(`/posts/${postId}`, {
+  fetch(`${API_HOST}/posts/${postId}`, {
     method: 'DELETE',
     headers,
   })
     .then(res => res);
 
 export const votePost = (postId, option) =>
-  fetch(`/posts/${postId}`, {
+  fetch(`${API_HOST}/posts/${postId}`, {
     method: 'POST',
     headers: {
       ...headers,
@@ -59,7 +61,7 @@ export const votePost = (postId, option) =>
     .then(data => data);
 
 export const updatePost = post =>
-  fetch(`/posts/${post.id}`, {
+  fetch(`${API_HOST}/posts/${post.id}`, {
     method: 'PUT',
     headers: {
       ...headers,
@@ -70,17 +72,17 @@ export const updatePost = post =>
     .then(data => data);
 
 export const getCommentsByPost = postId =>
-  fetch(`/posts/${postId}/comments`, { headers })
+  fetch(`${API_HOST}/posts/${postId}/comments`, { headers })
     .then(res => res.json())
     .then(data => data);
 
 export const getCommentById = commentId =>
-  fetch(`/comments/${commentId}`, { headers })
+  fetch(`${API_HOST}/comments/${commentId}`, { headers })
     .then(res => res.json())
     .then(data => data);
 
 export const updateComment = comment =>
-  fetch(`/comments/${comment.id}`, {
+  fetch(`${API_HOST}/comments/${comment.id}`, {
     method: 'PUT',
     headers: {
       ...headers,
@@ -91,7 +93,7 @@ export const updateComment = comment =>
     .then(data => data);
 
 export const addNewComment = newComment =>
-  fetch('/comments', {
+  fetch(`${API_HOST}/comments`, {
     method: 'POST',
     headers: {
       ...headers,
@@ -102,7 +104,7 @@ export const addNewComment = newComment =>
     .then(data => data);
 
 export const voteComment = (commentId, option) =>
-  fetch(`/comments/${commentId}`, {
+  fetch(`${API_HOST}/comments/${commentId}`, {
     method: 'POST',
     headers: {
       ...headers,
@@ -113,7 +115,7 @@ export const voteComment = (commentId, option) =>
     .then(data => data);
 
 export const deleteCommentById = commentId =>
-  fetch(`/comments/${commentId}`, {
+  fetch(`${API_HOST}/comments/${commentId}`, {
     method: 'DELETE',
     headers,
   }).then(res => res.json())
