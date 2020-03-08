@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/23f534ab-23e2-4aff-a119-882ec14f7396/deploy-status)](https://app.netlify.com/sites/reactnd-project-readable/deploys)
+
 # Readable App Project
 This is Udacity’s React Nanodegree second project assignment, "Readable"
 
